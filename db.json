@@ -1,0 +1,33 @@
+{
+  "hands": [{
+    "id": 1,
+    "cards": [
+      {
+        "id": 1,
+        "suit": "Hearts",
+        "value": 3
+      },
+      {
+        "id": 2,
+        "suit": "Hearts",
+        "value": 4
+      },
+      {
+        "id": 3,
+        "suit": "Hearts",
+        "value": 7
+      },
+      {
+        "id": 4,
+        "suit": "Hearts",
+        "value": 9
+      },
+      {
+        "id": 5,
+        "suit": "Hearts",
+        "value": "King"
+      }
+    ]
+  }
+  ]
+}
