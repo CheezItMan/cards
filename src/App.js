@@ -1,23 +1,61 @@
-import logo from './logo.svg';
+import Hand from './components/Hand';
+
 import './App.css';
 
-function App() {
+
+const CARD_DATA = [
+  {
+    id: 1,
+    suit: "Diamonds",
+    value: 6
+  },
+  {
+    id: 2,
+    suit: "Diamonds",
+    value: 7
+  },
+  {
+    id: 3,
+    suit: "Diamonds",
+    value: 8
+  },
+  {
+    "id": 4,
+    suit: "Diamonds",
+    value: 9
+  },
+  {
+    id: 5,
+    suit: "Diamonds",
+    value: "Queen"
+  }
+];
+
+const getImage = (card) => {
+  if (card.faceDown) {
+    return 'images/red_back.png';
+  }
+  const fileName = card.value.toString()[0] + card.suit[0].toUpperCase() + '.png';
+  return `images/${ fileName }`;
+}
+
+const App = () => {
+  const cards = CARD_DATA.map((cardData) => {
+    cardData.faceDown = true;
+    cardData.image = getImage(cardData);
+    return cardData;
+  });
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Playing Cards</h1>
       </header>
+      <main>
+        <Hand cards={cards} />
+      </main>
+
     </div>
   );
 }
