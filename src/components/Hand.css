@@ -1,0 +1,7 @@
+.hand {
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: auto;
+}
